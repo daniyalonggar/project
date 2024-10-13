@@ -1,0 +1,572 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fff;
+
+    
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #fff;
+
+    
+}
+
+.logo h1 {
+    font-family: 'Georgia', serif;
+    font-size: 2rem;
+    color: #000000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav ul li {
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-family: 'Georgia', serif;
+    font-style: italic;
+}
+
+nav ul li a:hover {
+    color: #b19772;
+}
+
+
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.left-section {
+    background-color: #fff;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    position: relative; /* Чтобы правый блок мог наложиться */
+}
+.intro {
+    transform: translateY(-110px); /* Поднять элемент на 20 пикселей вверх */
+}
+.intro h2 {
+    font-size: 45px;
+    margin-bottom: 10px;
+    color: #b19772;
+    font-family: 'Georgia', serif;
+}
+
+.intro h1 {
+    font-size: 45px;
+    font-family: 'Georgia', serif;
+    
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.intro h3 {
+    font-size: 15px;
+    margin-bottom: 30px;
+    color: #777;
+}
+
+.social-icons a {
+    margin-right: 15px;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+}
+
+.right-section {
+    background-color: #baaa93;
+    width: 80%; /* Увеличили ширину, чтобы было больше пространства */
+    color: #e0e0e061;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 190px;
+    clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%);
+
+    position: relative;
+  
+}
+
+.navigation ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 0;
+}
+
+.navigation ul li a {
+    color: #e0e0e061;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+
+.profile-image {
+    display: flex;
+    flex-direction: column; /* Изменено с flex-end на column, чтобы элементы располагались вертикально */
+    align-items: center; /* Центрирование элементов */
+    margin: 20px auto;
+    /* Добавьте дополнительные отступы, если нужно */
+}
+
+.profile-image img {
+    max-width: 60%; /* Увеличьте размер до 40% от ширины родительского элемента */
+    height: auto; /* Сохраняем пропорции */
+    border-radius: 25px;
+    margin-bottom: 10px;
+    transform: translate(50px, -80px); /* Сдвинуть вправо на 10px и вверх на 10px */
+}
+
+
+
+
+
+/* Контентный блок */
+.content {
+    
+    color: #e0e0e061;
+   
+    padding: 20px 20px;
+}
+
+
+.content-block p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+   margin-right: 80%;
+}
+
+
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #baaa93; /* Match the header */
+    color: white;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    
+}
+
+
+
+
+
+
+/* Стили применяются только к новому разделу формы */
+.new-form-section {
+    background-color: #fffdf5;
+    padding: 50px 20px;
+}
+
+.new-form-section .main-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.new-form-section h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #333;
+    line-height: 1.4;
+}
+
+.new-form-section form {
+    display: flex;
+    flex-direction: column;
+}
+
+.new-form-section form input,
+.new-form-section form textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    width: 100%;
+}
+
+.new-form-section form button {
+    background-color: #2d2dfd;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.new-form-section form button:hover {
+    background-color: #1e1efb;
+}
+
+/* Стили для нижнего колонтитула */
+.new-form-section footer {
+    background-color: #333;
+    padding: 20px;
+    color: white;
+}
+
+.new-form-section .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.new-form-section .footer-content p a {
+    color: #f9f9f9;
+    text-decoration: none;
+}
+
+.new-form-section .footer-content p a:hover {
+    text-decoration: underline;
+}
+
+.new-form-section .social-icons {
+    margin-top: 15px;
+}
+
+.new-form-section .social-icons .icon {
+    display: inline-block;
+    margin: 0 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 2px;
+}
+
+.new-form-section .social-icons .icon:hover {
+    border-bottom: 1px solid white;
+}
+
+/* Icon Container */
+.icon-container {
+    display: flex;
+    justify-content: space-around; /* Distribute icons evenly */
+    margin-top: 20px; /* Space above the icons */
+}
+
+/* Individual Icon Item */
+.icon-item {
+    text-align: center; /* Center text under icons */
+    max-width: 100px; /* Set a max width for icons */
+}
+
+.icon-item img {
+    width: 60px; /* Set width for the icons */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px; /* Space between icon and text */
+}
+
+.icon-item p {
+    font-size: 1.2rem; /* Adjust font size for text */
+    color: #000; /* Text color */
+    font-family: 'Georgia', serif; /* Consistent font family */
+    font-weight: bold; /* Bold text */
+}
+
+
+.icons {
+    display: flex;
+    justify-content: space-around; /* Space between icons */
+    margin-top: 20px; /* Space between the title and icons */
+}
+
+.icon {
+    background-color: #baaa93; /* Match the right-section color */
+    border-radius: 10px;
+    padding: 15px 20px;
+    text-align: center;
+    flex: 1; /* Makes icons take equal space */
+    margin: 0 10px; /* Margin for spacing */
+    transition: transform 0.3s; /* Smooth scaling effect */
+}
+
+.icon:hover {
+    transform: scale(1.1); /* Slightly enlarge the icon on hover */
+}
+
+.icon-text {
+    font-family: 'Georgia', serif;
+    font-size: 1.5rem; /* Increase font size for better visibility */
+    color: black; /* White text color for contrast */
+}
+
+.cta-btn {
+    background-color: #203082;
+    color: #f2eeee;
+    padding: 0.3rem 1.3rem; /* Reduced padding */
+    font-size: 0.9rem; /* Reduced font size */
+    text-decoration: none;
+    border-radius: 9px; /* Slightly smaller border-radius */
+    
+}
+/* Медиазапросы для адаптации */
+
+/* Для экранов шириной до 768px (планшеты и телефоны) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .left-section, .right-section {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .intro h2 {
+        font-size: 32px;
+    }
+
+    .intro h1 {
+        font-size: 32px;
+    }
+
+    .intro h3 {
+        font-size: 14px;
+    }
+
+    .profile-image {
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .profile-image {
+        margin-bottom: 30px; /* Ensure enough space for footer */
+        min-height: 200px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .cta-btn {
+        font-size: 0.8rem;
+        padding: 0.4rem 1rem;
+    }
+
+    .icons {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .icon {
+        width: 100%;
+    }
+}
+
+/* Для экранов шириной до 480px (мобильные устройства) */
+@media (max-width: 480px) {
+    .intro h2 {
+        font-size: 28px;
+    }
+
+    .intro h1 {
+        font-size: 28px;
+    }
+
+    .intro h3 {
+        font-size: 12px;
+    }
+
+    .profile-image {
+        margin-bottom: 15px;
+    }
+
+    .profile-image img {
+        max-width: 90%;
+    }
+
+    .right-section {
+        padding: 50px;
+        background-color: #baaa93;
+    }
+
+    .nav-links li {
+        font-size: 1.2rem;
+    }
+
+    .cta-btn {
+        font-size: 0.7rem;
+        padding: 0.3rem 0.8rem;
+    }
+
+    footer {
+        padding: 15px 0;
+    }
+
+    .icon-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .icon-item {
+        margin-bottom: 20px;
+    }
+}
+
+/* Остальные медиа-запросы остаются без изменений */
+/* Для экранов шириной до 1200px (большие планшеты и небольшие ноутбуки) */
+@media (max-width: 1200px) {
+    header {
+        padding: 15px 30px;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left-section, .right-section {
+        width: 90%;
+        padding: 30px;
+    }
+
+    .intro h2 {
+        font-size: 36px;
+    }
+
+    .intro h1 {
+        font-size: 36px;
+    }
+
+    .intro h3 {
+        font-size: 14px;
+    }
+
+    .profile-image {
+        margin-bottom: 20px; /* Отступ снизу для предотвращения перекрытия */
+    }
+
+    .profile-image img {
+        max-width: 70%;
+    }
+
+    .cta-btn {
+        font-size: 0.8rem;
+        padding: 0.4rem 1.2rem;
+    }
+
+    .right-section {
+        padding: 150px;
+        clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+
+    .icons {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+}
+
+/* Для экранов шириной до 1000px (планшеты в портретной ориентации) */
+@media (max-width: 1000px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left-section, .right-section {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .intro h2 {
+        font-size: 32px;
+    }
+
+    .intro h1 {
+        font-size: 32px;
+    }
+
+    .intro h3 {
+        font-size: 13px;
+    }
+
+    .profile-image {
+        margin-bottom: 20px; /* Отступ снизу для предотвращения перекрытия */
+    }
+
+    .profile-image img {
+        max-width: 80%;
+    }
+
+    .cta-btn {
+        font-size: 0.75rem;
+        padding: 0.3rem 1rem;
+    }
+
+    .right-section {
+        padding: 100px;
+        clip-path: none;
+        background-color: #baaa93;
+    }
+
+    .icons {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .icon {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+}
+

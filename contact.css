@@ -1,0 +1,303 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f8f8; /* Light blue background */
+    color: #333;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #fff;
+
+    
+}
+
+.logo h1 {
+    font-family: 'Georgia', serif;
+    font-size: 2rem;
+    color: #000000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav ul li {
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-family: 'Georgia', serif;
+    font-style: italic;
+}
+
+nav ul li a:hover {
+    color: #b19772;
+}
+
+
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+
+/* Contact Container */
+.contact-container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-container h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #b19772;
+    margin-bottom: 30px;
+}
+
+/* Contact Form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact-form .submit-btn {
+    background-color: #b19772;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form .submit-btn:hover {
+    background-color: #172a65;
+}
+
+
+
+
+
+/* Контентный блок */
+.content {
+    
+    color: #e0e0e061;
+   
+    padding: 20px 20px;
+}
+
+
+.content-block p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+   margin-right: 80%;
+}
+
+
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #baaa93; /* Match the header */
+    color: white;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    top: 70px;
+}
+
+
+/* Для экранов шириной до 1200px (ноутбуки, большие планшеты) */
+@media (max-width: 1200px) {
+    header {
+        padding: 15px 30px; /* Уменьшение отступов */
+    }
+
+    .logo h1 {
+        font-size: 1.8rem; /* Уменьшение размера логотипа */
+    }
+
+    nav ul {
+        gap: 20px; /* Уменьшение расстояния между элементами навигации */
+    }
+
+    nav ul li {
+        font-size: 1.3rem; /* Уменьшение размера шрифта в навигации */
+    }
+
+    .contact-container {
+        margin: 30px auto; /* Уменьшение отступов */
+        padding: 15px; /* Уменьшение внутренних отступов */
+    }
+
+    .contact-container h2 {
+        font-size: 2.2rem; /* Уменьшение размера заголовка */
+    }
+
+    .contact-form input, .contact-form textarea {
+        font-size: 0.9rem; /* Уменьшение размера шрифта в полях ввода */
+    }
+
+    .contact-form .submit-btn {
+        font-size: 1rem; /* Уменьшение размера шрифта кнопки */
+        padding: 8px 16px; /* Уменьшение отступов кнопки */
+    }
+}
+
+/* Для экранов шириной до 1000px (планшеты, меньшие ноутбуки) */
+@media (max-width: 1000px) {
+    header {
+        padding: 10px 20px; /* Дальнейшее уменьшение отступов */
+    }
+
+    .logo h1 {
+        font-size: 1.6rem; /* Уменьшение размера логотипа */
+    }
+
+    nav ul {
+        gap: 15px; /* Уменьшение расстояния между элементами навигации */
+    }
+
+    nav ul li {
+        font-size: 1.2rem; /* Уменьшение размера шрифта в навигации */
+    }
+
+    .contact-container {
+        margin: 20px auto; /* Уменьшение отступов */
+        padding: 10px; /* Уменьшение внутренних отступов */
+    }
+
+    .contact-container h2 {
+        font-size: 2rem; /* Уменьшение размера заголовка */
+    }
+
+    .contact-form input, .contact-form textarea {
+        font-size: 0.85rem; /* Уменьшение размера шрифта в полях ввода */
+    }
+
+    .contact-form .submit-btn {
+        font-size: 0.9rem; /* Уменьшение размера шрифта кнопки */
+        padding: 7px 14px; /* Уменьшение отступов кнопки */
+    }
+}
+
+
+/* Для экранов шириной до 768px (планшеты и мобильные устройства) */
+@media (max-width: 768px) {
+    header {
+        padding: 10px 15px; /* Уменьшение отступов */
+        flex-direction: column; /* Вертикальное расположение элементов */
+        align-items: flex-start; /* Выравнивание по левому краю */
+    }
+
+    .logo h1 {
+        font-size: 1.4rem; /* Уменьшение размера логотипа */
+    }
+
+    nav ul {
+        flex-direction: column; /* Вертикальное расположение навигационных элементов */
+        gap: 10px; /* Уменьшение расстояния между элементами навигации */
+    }
+
+    nav ul li {
+        font-size: 1rem; /* Уменьшение размера шрифта в навигации */
+    }
+
+    .contact-container {
+        margin: 15px auto; /* Уменьшение отступов */
+        padding: 15px; /* Уменьшение внутренних отступов */
+    }
+
+    .contact-container h2 {
+        font-size: 1.8rem; /* Уменьшение размера заголовка */
+    }
+
+    .contact-form input, .contact-form textarea {
+        font-size: 0.8rem; /* Уменьшение размера шрифта в полях ввода */
+    }
+
+    .contact-form .submit-btn {
+        font-size: 0.8rem; /* Уменьшение размера шрифта кнопки */
+        padding: 6px 12px; /* Уменьшение отступов кнопки */
+    }
+}
+
+/* Для экранов шириной до 400px (мобильные устройства) */
+@media (max-width: 400px) {
+    header {
+        padding: 5px 10px; /* Уменьшение отступов */
+    }
+
+    .logo h1 {
+        font-size: 1.2rem; /* Уменьшение размера логотипа */
+    }
+
+    nav ul {
+        gap: 8px; /* Дальнейшее уменьшение расстояния между элементами навигации */
+    }
+
+    nav ul li {
+        font-size: 0.9rem; /* Уменьшение размера шрифта в навигации */
+    }
+
+    .contact-container {
+        margin: 10px auto; /* Уменьшение отступов */
+        padding: 10px; /* Уменьшение внутренних отступов */
+    }
+
+    .contact-container h2 {
+        font-size: 1.6rem; /* Уменьшение размера заголовка */
+    }
+
+    .contact-form input, .contact-form textarea {
+        font-size: 0.75rem; /* Уменьшение размера шрифта в полях ввода */
+    }
+
+    .contact-form .submit-btn {
+        font-size: 0.75rem; /* Уменьшение размера шрифта кнопки */
+        padding: 5px 10px; /* Уменьшение отступов кнопки */
+    }
+}
+

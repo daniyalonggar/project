@@ -1,0 +1,408 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f8f8; /* Light blue background */
+    color: #333;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #fff;
+
+    
+}
+
+.logo h1 {
+    font-family: 'Georgia', serif;
+    font-size: 2rem;
+    color: #000000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav ul li {
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-family: 'Georgia', serif;
+    font-style: italic;
+}
+
+nav ul li a:hover {
+    color: #b19772;
+}
+
+
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+
+
+/* Family Page */
+/* Family Page */
+.family-content {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #f8f8f8;
+}
+
+.family-content h2 {
+    font-size: 36px;
+    color: #b19772;
+    font-family: 'Georgia', serif;
+    margin-bottom: 30px;
+}
+
+/* Grid Layout */
+.family-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Family Member Card */
+/* Family Page */
+.family-content {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #f8f8f8;
+}
+
+.family-content h2 {
+    font-size: 36px;
+    color: #b19772;
+    font-family: 'Georgia', serif;
+    margin-bottom: 30px;
+}
+
+/* Grid Layout */
+.family-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Четыре колонки */
+    gap: 30px;
+    max-width: 1200px; /* Максимальная ширина сетки */
+    margin: 0 auto; /* Центрирование сетки */
+}
+
+/* Family Member Card */
+.family-member {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+}
+
+.family-member:hover {
+    transform: translateY(-10px);
+}
+
+.family-member img {
+    width: 100%;
+    height: auto;
+    border-bottom: 3px solid #b19772;
+}
+
+.family-member .details {
+    padding: 20px;
+    text-align: left;
+}
+
+.family-member h3 {
+    font-size: 24px;
+    margin: 10px 0;
+    color: #333;
+    font-family: 'Georgia', serif;
+}
+
+.family-member p {
+    font-size: 16px;
+    color: #777;
+    line-height: 1.5;
+}
+
+/* Additional Overlay for Visual Effect */
+.family-member .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-family: 'Georgia', serif;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.family-member:hover .overlay {
+    opacity: 1;
+}
+
+
+
+/* Контентный блок */
+.content {
+    
+    color: #e0e0e061;
+   
+    padding: 20px 20px;
+}
+
+
+.content-block p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+   margin-right: 80%;
+}
+
+
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #baaa93; /* Match the header */
+    color: white;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+/* Для экранов шириной до 1200px (большие планшеты и небольшие ноутбуки) */
+@media (max-width: 1200px) {
+    header {
+        padding: 15px 30px;
+    }
+
+    .family-content h2 {
+        font-size: 32px;
+    }
+
+    .family-grid {
+        grid-template-columns: repeat(3, 1fr); /* Три колонки */
+        gap: 20px;
+    }
+
+    .family-member .details {
+        padding: 15px;
+    }
+
+    .family-member h3 {
+        font-size: 22px;
+    }
+
+    .family-member p {
+        font-size: 14px;
+    }
+
+    .logo h1 {
+        font-size: 1.8rem;
+    }
+
+    nav ul li {
+        font-size: 1.3rem;
+    }
+
+    .content-block p {
+        margin-right: 70%;
+    }
+}
+
+/* Для экранов шириной до 1000px (планшеты в портретной ориентации) */
+@media (max-width: 1000px) {
+    header {
+        padding: 10px 20px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .family-content h2 {
+        font-size: 28px;
+    }
+
+    .family-grid {
+        grid-template-columns: repeat(2, 1fr); /* Две колонки */
+        gap: 15px;
+    }
+
+    .family-member {
+        padding: 10px;
+    }
+
+    .family-member h3 {
+        font-size: 20px;
+    }
+
+    .family-member p {
+        font-size: 12px;
+    }
+
+    .family-member img {
+        border-bottom: 2px solid #b19772;
+    }
+
+    footer {
+        padding: 15px 0;
+    }
+
+    .content-block p {
+        margin-right: 50%;
+    }
+
+    .social-icons img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* Для экранов шириной до 768px (планшеты, маленькие ноутбуки) */
+@media (max-width: 768px) {
+    header {
+        padding: 10px 15px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .family-content h2 {
+        font-size: 24px;
+    }
+
+    .family-grid {
+        grid-template-columns: 1fr; /* Одна колонка */
+        gap: 10px;
+    }
+
+    .family-member {
+        padding: 8px;
+    }
+
+    .family-member h3 {
+        font-size: 18px;
+    }
+
+    .family-member p {
+        font-size: 12px;
+    }
+
+    .family-member img {
+        border-bottom: 1px solid #b19772;
+    }
+
+    footer {
+        padding: 10px 0;
+    }
+
+    .content-block p {
+        margin-right: 30%;
+    }
+
+    .social-icons img {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+/* Для экранов шириной до 400px (смартфоны в портретной ориентации) */
+@media (max-width: 400px) {
+    header {
+        padding: 5px 10px;
+    }
+
+    .logo h1 {
+        font-size: 1.5rem;
+    }
+
+    nav ul li {
+        font-size: 1.1rem;
+    }
+
+    .family-content h2 {
+        font-size: 20px;
+    }
+
+    .family-grid {
+        gap: 5px;
+    }
+
+    .family-member {
+        padding: 5px;
+        box-shadow: none;
+    }
+
+    .family-member h3 {
+        font-size: 16px;
+    }
+
+    .family-member p {
+        font-size: 10px;
+    }
+
+    footer {
+        font-size: 14px;
+        padding: 8px 0;
+    }
+
+    .social-icons img {
+        width: 16px;
+        height: 16px;
+    }
+
+    .content-block p {
+        font-size: 12px;
+        margin-right: 10%;
+    }
+}
+

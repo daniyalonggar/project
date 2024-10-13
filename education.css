@@ -1,0 +1,312 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e0e0e0;
+    color: #333;
+    margin: 0;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #fff;
+
+    
+}
+
+.logo h1 {
+    font-family: 'Georgia', serif;
+    font-size: 2rem;
+    color: #000000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav ul li {
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-family: 'Georgia', serif;
+    font-style: italic;
+}
+
+nav ul li a:hover {
+    color: #b19772;
+}
+
+
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Education container styles */
+.education-container {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.education-container h2 {
+    font-size: 2.2rem;
+    color: #b19772;
+    margin-bottom: 30px;
+}
+
+/* Education grid styles */
+.education-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 0 20px;
+    align-items: start;
+}
+
+.education-item {
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease;
+  width: 90%;
+}
+
+.education-item:hover {
+    transform: scale(1.05);
+}
+
+.education-item img {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #b19772;
+   
+}
+
+/* Additional Overlay for Visual Effect */
+.education-item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-family: 'Georgia', serif;
+    text-align: center;
+    border-radius: 40px;
+}
+
+.education-item:hover .overlay {
+    opacity: 1;
+}
+
+.education-info {
+    padding: 15px;
+}
+
+.education-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+}
+
+.education-info p {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* Footer */
+
+
+/* Контентный блок */
+.content {
+    
+    color: #e0e0e061;
+   
+    padding: 20px 20px;
+}
+
+
+.content-block p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+   margin-right: 80%;
+}
+
+
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #baaa93; /* Match the header */
+    color: white;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+
+
+/* Для экранов шириной до 1200px (ноутбуки, большие планшеты) */
+@media (max-width: 1200px) {
+    nav ul {
+        gap: 20px;
+    }
+
+    .education-container h2 {
+        font-size: 2rem;
+    }
+
+    .education-grid {
+        grid-template-columns: repeat(2, 1fr); /* Две колонки */
+        gap: 15px;
+    }
+
+    .education-item {
+        width: 100%; /* Полная ширина */
+    }
+
+    .education-info h3 {
+        font-size: 1.3rem;
+    }
+
+    .education-info p {
+        font-size: 0.85rem;
+    }
+}
+
+/* Для экранов шириной до 1000px (планшеты, меньшие ноутбуки) */
+@media (max-width: 1000px) {
+    header {
+        padding: 15px 30px; /* Уменьшение отступов */
+    }
+
+    nav ul {
+        gap: 15px;
+    }
+
+    .education-container h2 {
+        font-size: 1.8rem; /* Уменьшение размера заголовка */
+    }
+
+    .education-grid {
+        grid-template-columns: repeat(2, 1fr); /* Две колонки */
+        gap: 15px;
+    }
+
+    .education-item {
+        width: 100%; /* Полная ширина */
+    }
+
+    .education-info h3 {
+        font-size: 1.2rem;
+    }
+
+    .education-info p {
+        font-size: 0.8rem; /* Уменьшение размера текста */
+    }
+}
+
+/* Для экранов шириной до 768px (планшеты) */
+@media (max-width: 768px) {
+    header {
+        padding: 10px 20px; /* Уменьшение отступов */
+    }
+
+    nav ul {
+        flex-direction: column; /* Вертикальное размещение навигационных элементов */
+        gap: 10px; /* Уменьшение промежутков между пунктами меню */
+    }
+
+    .education-container h2 {
+        font-size: 1.5rem; /* Уменьшение размера заголовка */
+    }
+
+    .education-grid {
+        grid-template-columns: 1fr; /* Одна колонка */
+        gap: 10px; /* Уменьшение промежутков между элементами */
+    }
+
+    .education-item {
+        width: 90%; /* Уменьшение ширины элемента */
+        margin: 0 auto; /* Центрирование */
+    }
+
+    .education-info h3 {
+        font-size: 1.1rem; /* Уменьшение размера заголовка в элементе образования */
+    }
+
+    .education-info p {
+        font-size: 0.75rem; /* Уменьшение размера текста */
+    }
+
+    .overlay {
+        font-size: 14px; /* Уменьшение размера текста в оверлее */
+    }
+}
+
+/* Для экранов шириной до 400px (мобильные телефоны) */
+@media (max-width: 400px) {
+    header {
+        padding: 10px 15px; /* Минимальные отступы */
+    }
+
+    nav ul {
+        flex-direction: column; /* Вертикальное размещение навигационных элементов */
+        gap: 8px; /* Уменьшение промежутков между пунктами меню */
+    }
+
+    .education-container h2 {
+        font-size: 1.3rem; /* Уменьшение размера заголовка */
+    }
+
+    .education-grid {
+        grid-template-columns: 1fr; /* Одна колонка */
+        gap: 8px; /* Уменьшение промежутков между элементами */
+    }
+
+    .education-item {
+        width: 95%; /* Уменьшение ширины элемента */
+        margin: 0 auto; /* Центрирование */
+    }
+
+    .education-info h3 {
+        font-size: 1rem; /* Уменьшение размера заголовка в элементе образования */
+    }
+
+    .education-info p {
+        font-size: 0.65rem; /* Уменьшение размера текста */
+    }
+
+    .overlay {
+        font-size: 12px; /* Уменьшение размера текста в оверлее */
+    }
+}
